@@ -28,8 +28,10 @@ affichage = document.getElementById("affichage");
 
 
 maDiv.onclick = function() {
-    affichage.innerHTML = "Le monstre perd 10 !";
-        affichage.innerHTML = "Le monstre riposte ";
+    if (maDiv) {
+        affichage.innerHTML = "Le monstre perd 10 !";
+            affichage.innerHTML = "Le monstre riposte ";
+        }
 }
 
 
