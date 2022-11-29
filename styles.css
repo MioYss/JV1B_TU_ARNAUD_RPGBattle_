@@ -1,4 +1,33 @@
 
+body{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.champDeBataille{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.herosSprite{
+
+    padding: 1% 10% 10% 70%; 
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+
+}
+
+.tropPetit{
+    height: 250px;
+    width: 250px;
+
+}
 
 .boiteHeros {
 
@@ -21,7 +50,7 @@
     left: 0;
     width: 20%; 
     height: 180px; 
-    background: rgb(117, 16, 16); 
+    background: rgb(136, 57, 57); 
 
 }
 
@@ -32,7 +61,7 @@
     left: 0;
     width: 20%; 
     height: 180px; 
-    background: rgb(117, 16, 16); 
+    background: rgb(136, 57, 57); 
 
 }
 
@@ -43,7 +72,7 @@
     left: 0;
     width: 20%; 
     height: 180px; 
-    background: rgb(117, 16, 16); 
+    background: rgb(136, 57, 57); 
 
 }
 
@@ -54,14 +83,14 @@
     left: 0;
     width: 20%; 
     height: 180px; 
-    background: rgb(117, 16, 16); 
+    background: rgb(136, 57, 57); 
 
 }
 
 
 .monstresSprite{
 
-    padding-top:20%;
+    padding: 5% 1% 1% 1%; 
     display: flex;
     flex-direction: column;
 }
