@@ -12,9 +12,13 @@
         
         <div class="champDeBataille" >
             <div class="monstresSprite" >
-                <div class="monstre1">
-                    <img src= "img/mob01.png">
-                </div>
+                <img class = "boiteMonstres" src= "img/mob01.png">
+                    <span class="monstre1">
+                        <progress id="pvMonstre1" value="100" max="100"></progress>
+
+                        <div id= "monstre1"></div>
+                    </span>
+                </img>
 
                 <div class="monstre2">
                     <img src= "img/mob02.png">
@@ -40,33 +44,35 @@
 
                 <div class="heros1">
                     <div class="pointDeVie">PV</div>
-                    <div class="mana">Mana</div>
-                    <div class="attaque">Attaque</div>
+                    <div class= "pvJoueur1"id="pvJoueur1">100</div>
+                    <div class="mana">Mana</div><div>100</div>
+                    <div class="attaque" id="atkHeros1">Attaque</div>
                     <div class="defense">Defense</div>
                     <div class="attaqueSpe1">Sort</div>
                 </div>
 
                 <div class="heros2">
                     <div class="pointDeVie">PV</div>
-                    <div class="mana">Mana</div>
-                    <div class="attaque">Attaque</div>
+                    <div class= "pvJoueur2"id="pvJoueur2">100</div>
+                    <div class="mana">Mana</div><div>100</div>
+                    <div class="attaque"id="atkHeros2">Attaque</div>
                     <!---->
                     <div class="defense">Defense</div>
                     <div class="attaqueSpe2">Sort</div>
                 </div>
 
                 <div class="heros3">
-                    <div class="pointDeVie">Pv</div>
-                    <div class="mana">Mana</div>
-                    <div class="attaque">Attaque</div>
+                    <div class="pointDeVie">Pv</div><div>100</div>
+                    <div class="mana">Mana</div><div>100</div>
+                    <div class="attaque"id="atkHeros3">Attaque</div>
                     <div class="defense">Defense</div>
                     <div class="attaqueSpe3">Sort</div>
                 </div> 
 
                 <div class="heros4">
-                    <div class="pointDeVie">Pv</div>
-                    <div class="mana">Mana</div>
-                    <div class="attaque">Attaque</div>
+                    <div class="pointDeVie">Pv:</div><div>100</div>
+                    <div class="mana">Mana</div><div>100</div>
+                    <div class="attaque"id="atkHeros4">Attaque</div>
                     <div class="defense">Defense</div>
                     <div class="attaqueSpe4">Sort</div>
                 </div>

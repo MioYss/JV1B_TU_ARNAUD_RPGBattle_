@@ -12,6 +12,11 @@ pvMob1 = document.getElementById("pvMob1");
 pvMob2 = document.getElementById("pvMob2");
 pvMob3 = document.getElementById("pvMob3");
 
+atkHeros1 = document.getElementById("atkHeros1");
+atkHeros2 = document.getElementById("atkHeros2");
+atkHeros3 = document.getElementById("atkHeros3");
+atkHeros4 = document.getElementById("atkHeros4");
+
 affichePvJoueur1 = document.getElementById("affichePvJoueur1");
 affichePvJoueur2 = document.getElementById("affichePvJoueur2");
 affichePvJoueur3 = document.getElementById("affichePvJoueur3");
@@ -27,19 +32,13 @@ affichage = document.getElementById("affichage");
 // div click a changer apres
 
 
-maDiv.onclick = function() {
+atkHeros1.onclick = function() {
     if (maDiv) {
-        affichage.innerHTML = "Le monstre perd 10 !";
+        affichage.innerHTML = "Le monstre perd 10 PV !";
             affichage.innerHTML = "Le monstre riposte ";
+            pvJoueur1.innerHTML = pvJoueur1.innerHTML -(10)
         }
 }
-maDiv = document.getElementById("maDiv");
-valeurResultat = document.getElementById("valeurResultat");
-afficheAction = document.getElementById("afficheAction");
 
-maDiv.onclick = function() {
-    valeurResultat.innerHTML = valeurResultat.innerHTML+10;
-    afficheAction.innerHTML = "J'ai ajouté 10 !";
-}
 
 
