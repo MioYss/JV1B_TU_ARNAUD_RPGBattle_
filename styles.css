@@ -2,6 +2,7 @@
 body{
     width: 100vw;
     height: 100vh;
+    margin: 0%;
 
 }
 
@@ -9,6 +10,7 @@ body{
 
     display: flex;
     flex-direction: row;
+
 
 }
 
@@ -57,6 +59,46 @@ body{
     z-index: 1;
 
 }
+
+.boiteMonstres:hover .monstre1{
+
+    visibility: visible;
+
+}
+
+.boiteMonstres:hover .monstre2{
+
+    visibility: visible;
+
+}
+
+.boiteMonstres:hover .monstre3{
+
+    visibility: visible;
+
+}
+
+
+.boitePvHeros .barreHero1{
+
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 2%;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.boitePvHeros:hover .barreHero1{
+
+    visibility: visible;
+
+}
+
+
 
 .herosSprite{
 
@@ -135,28 +177,11 @@ body{
 
 .monstresSprite{
 
-    padding: 5% 1% 1% 1%; 
+    padding: 1% 1% 1% 1%; 
     display: flex;
     flex-direction: column;
-    width: 100%; 
-    height: 200px; 
+    width: 250px; 
+    height: 150px;
 }
 
 
-.boiteMonstres:hover .monstre1{
-
-    visibility: visible;
-
-}
-
-.boiteMonstres:hover .monstre2{
-
-    visibility: visible;
-
-}
-
-.boiteMonstres:hover .monstre3{
-
-    visibility: visible;
-
-}

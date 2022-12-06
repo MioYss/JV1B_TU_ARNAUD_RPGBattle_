@@ -34,7 +34,7 @@
                 </div> -->
 
                 <img class = "boiteMonstres" src= "img/mob03.png">
-                <span class="monstre2">
+                <span class="monstre3">
                     <progress id="pvMonstre3" value="100" max="100"></progress>
 
                     <div id= "monstre3"></div>
@@ -47,25 +47,36 @@
 
             </div>
 
+                <!-- Barre de vie des  -->
+
             <div class="herosSprite">
-                <div class="tropPetit">
+                <img class = "boitePvHeros" src= "img/hero1.png">
+                    <span class="barreHero1">
+                        <progress id="pvHero1" value="100" max="100"></progress>
+
+                        <div id= "barreHero1"></div>
+                    </span>
+                </img>
+
+               <!-- <div class="tropPetit">
                     <img src= "img/hero1.png">
                 </div>
                     <img src= "img/hero2.png">
                     <img src= "img/hero3.png">
                     <img src= "img/hero4.png">
-            </div>
+            </div> -->
 
         </div>
             <div class="boiteHeros">
 
                 <div class="heros1">
-                    <div class="pointDeVie">PV</div>
-                    <div class= "pvJoueur1"id="pvJoueur1">100</div>
+                    <button onclick ="fcAttaqueheros1()" id="atkHeros1">Attaque</button>
+                    <button onclick ="defenseheros1()">Defense</button>
+                    <button onclick="attaqueSpe1()">Sort</button>
+                   <!-- <div class="pointDeVie">PV</div>
+                    <div class= "pvJoueur1"id="pvJoueur1">100</div> -->
                     <div class="mana">Mana</div><div>100</div>
-                    <div class="attaque" id="atkHeros1">Attaque</div>
-                    <div class="defense">Defense</div>
-                    <div class="attaqueSpe1">Sort</div>
+
                 </div>
 
                 <div class="heros2">
@@ -73,7 +84,6 @@
                     <div class= "pvJoueur2"id="pvJoueur2">100</div>
                     <div class="mana">Mana</div><div>100</div>
                     <div class="attaque"id="atkHeros2">Attaque</div>
-                    <!---->
                     <div class="defense">Defense</div>
                     <div class="attaqueSpe2">Sort</div>
                 </div>

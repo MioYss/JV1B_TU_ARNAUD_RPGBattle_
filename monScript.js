@@ -1,8 +1,3 @@
-maDiv = document.getElementById("maDiv");
-maDiv2 = document.getElementById("maDiv2");
-maDiv3 = document.getElementById("maDiv3");
-maDiv4 = document.getElementById("maDiv4");
-maDiv5 = document.getElementById("maDiv5");
 
 pvJoueur1 = document.getElementById("pvJoueur1");
 pvJoueur2 = document.getElementById("pvJoueur2");
@@ -31,14 +26,28 @@ affichage = document.getElementById("affichage");
 // div.onclick machin sur quoi on doit cliquer pas forcement texte
 // div click a changer apres
 
+let pvMonstre1 = document.getElementById("pvMonstre1")
+let pvHero1 = document.getElementById("pvHero1")
 
-atkHeros1.onclick = function() {
-    if (maDiv) {
-        affichage.innerHTML = "Le monstre perd 10 PV !";
-            affichage.innerHTML = "Le monstre riposte ";
-            pvJoueur1.innerHTML = pvJoueur1.innerHTML -(10)
-        }
+function fcAttaqueheros1(){
+
+    pvMonstre1.value -= 10;
+    affichage.innerHTML = "Le monstre perd 10 PV !";
+    affichage.innerHTML += "</br>"+" Le monstre riposte il vous inflige 10 PV !";
+    pvHero1.value -= 10;
 }
 
+function defenseheros1(){
 
+    affichage.innerHTML = "Vous ne pouvez pas subir de dégats !";
+
+    
+}
+
+function attaqueSpe1(){
+
+    pvMonstre1.value -= 30;
+    affichage.innerHTML = "Le monstre perd 30 PV !"
+
+}
 
