@@ -7,47 +7,40 @@
         <script src="monScript.js" async></script>
     </head>
     <body>
-        <div id="maDiv">Le joueur numero 1 attaque</div>
+        <div id="maDiv">Le joueur attaque</div>
         <div id="affichage"></div>
         
         <div class="champDeBataille" >
             <div class="monstresSprite" >
-
-                <img class = "boiteMonstres" src= "img/mob01.png">
+                               <!--Affichage des monstres et la barre de vie-->
+                <div class = "barrePv"> 
+                    <img class = "boiteMonstres" src= "img/mob01.png" />
                     <span class="monstre1">
                         <progress id="pvMonstre1" value="100" max="100"></progress>
-
                         <div id= "monstre1"></div>
                     </span>
-                </img>
-
-                <img class = "boiteMonstres" src= "img/mob02.png">
+                </div>
+            
+                <div class = "barrePv2">
+                    <img class = "boiteMonstres" src= "img/mob02.png" />
                     <span class="monstre2">
                         <progress id="pvMonstre2" value="100" max="100"></progress>
-
                         <div id= "monstre2"></div>
                     </span>
-                </img>
+                </div>
 
-               <!-- <div class="monstre2">
-                    <img src= "img/mob02.png">
-                </div> -->
+                <div class = "barrePv3">
+                    <img class = "boiteMonstres" src= "img/mob03.png" />
+                    <span class="monstre3">
+                        <progress id="pvMonstre3" value="100" max="100"></progress>
 
-                <img class = "boiteMonstres" src= "img/mob03.png">
-                <span class="monstre3">
-                    <progress id="pvMonstre3" value="100" max="100"></progress>
-
-                    <div id= "monstre3"></div>
-                </span>
-            </img>
-
-                <!--<div class="monstre3">
-                    <img src= "img/mob03.png">
-                </div> -->
+                        <div id= "monstre3"></div>
+                    </span>
+                </div>
 
             </div>
 
-                <!-- Barre de vie des  -->
+                <!-- Afichage heros et barre de vie -->
 
             <div class="herosSprite">
                 <img class = "boitePvHeros" src= "img/hero1.png">
@@ -58,14 +51,32 @@
                     </span>
                 </img>
 
-               <!-- <div class="tropPetit">
-                    <img src= "img/hero1.png">
-                </div>
-                    <img src= "img/hero2.png">
-                    <img src= "img/hero3.png">
-                    <img src= "img/hero4.png">
-            </div> -->
+                <img class = "boitePvHeros" src= "img/hero2.png">
+                    <span class="barreHero2">
+                        <progress id="pvHero2" value="100" max="100"></progress>
 
+                        <div id= "barreHero2"></div>
+                    </span>
+                </img>
+
+                <img class = "boitePvHeros" src= "img/hero3.png">
+                    <span class="barreHero3">
+                        <progress id="pvHero3" value="100" max="100"></progress>
+
+                        <div id= "barreHero3"></div>
+                    </span>
+                </img>
+
+                <img class = "boitePvHeros" src= "img/hero4.png">
+                    <span class="barreHero4">
+                        <progress id="pvHero4" value="100" max="100"></progress>
+
+                        <div id= "barreHero4"></div>
+                    </span>
+                </img>
+
+
+            
         </div>
             <div class="boiteHeros">
 
@@ -73,35 +84,32 @@
                     <button onclick ="fcAttaqueheros1()" id="atkHeros1">Attaque</button>
                     <button onclick ="defenseheros1()">Defense</button>
                     <button onclick="attaqueSpe1()">Sort</button>
-                   <!-- <div class="pointDeVie">PV</div>
+                   <div class="mana">Mana</div><div>100</div>
+                    <!-- <div class="pointDeVie">PV</div>
                     <div class= "pvJoueur1"id="pvJoueur1">100</div> -->
-                    <div class="mana">Mana</div><div>100</div>
-
+                    
                 </div>
 
                 <div class="heros2">
-                    <div class="pointDeVie">PV</div>
-                    <div class= "pvJoueur2"id="pvJoueur2">100</div>
-                    <div class="mana">Mana</div><div>100</div>
-                    <div class="attaque"id="atkHeros2">Attaque</div>
-                    <div class="defense">Defense</div>
-                    <div class="attaqueSpe2">Sort</div>
+                    <button onclick ="fcAttaqueheros2()" id="atkHeros2">Attaque</button>
+                    <button onclick ="defenseheros2()">Defense</button>
+                    <button onclick="attaqueSpe2()">Sort</button>
+                   <div class="mana">Mana</div><div>100</div>
+
                 </div>
 
                 <div class="heros3">
-                    <div class="pointDeVie">Pv</div><div>100</div>
+                    <button onclick ="fcAttaqueheros3()" id="atkHeros3">Attaque</button>
+                    <button onclick ="defenseheros3()">Defense</button>
+                    <button onclick="attaqueSpe3()">Sort</button>
                     <div class="mana">Mana</div><div>100</div>
-                    <div class="attaque"id="atkHeros3">Attaque</div>
-                    <div class="defense">Defense</div>
-                    <div class="attaqueSpe3">Sort</div>
                 </div> 
 
                 <div class="heros4">
-                    <div class="pointDeVie">Pv:</div><div>100</div>
-                    <div class="mana">Mana</div><div>100</div>
-                    <div class="attaque"id="atkHeros4">Attaque</div>
-                    <div class="defense">Defense</div>
-                    <div class="attaqueSpe4">Sort</div>
+                    <button onclick ="fcAttaqueheros4()" id="atkHeros4">Attaque</button>
+                    <button onclick ="defenseheros4()">Defense</button>
+                    <button onclick="attaqueSpe4()">Sort</button>
+                   <div class="mana">Mana</div><div>100</div>
                 </div>
             </div>
     </body>

@@ -14,17 +14,12 @@ body{
 
 }
 
-/*.boiteMonstres{
+/* Le setting de la barre de vie }*/
 
-    background: url(img/mob01.png);
-    height: 150px;
-    width: 150px;
-}*/
-
-.boiteMonstres .monstre1{
+.monstre1{
 
     visibility: hidden;
-    width: 100px;
+    width: 160px;
     background-color: black;
     color: aliceblue;
     border-radius: 2%;
@@ -34,10 +29,10 @@ body{
 
 }
 
-.boiteMonstres .monstre2{
+.monstre2{
 
     visibility: hidden;
-    width: 100px;
+    width: 160px;
     background-color: black;
     color: aliceblue;
     border-radius: 2%;
@@ -47,32 +42,33 @@ body{
 
 }
 
-.boiteMonstres .monstre3{
+.monstre3{
 
     visibility: hidden;
-    width: 100px;
-    background-color: black;
+    width: 160px;
+    background-color: rgb(0, 0, 0);
     color: aliceblue;
-    border-radius: 2%;
+    border-radius: 6%;
     padding: 5px;
     position: absolute;
     z-index: 1;
 
 }
 
-.boiteMonstres:hover .monstre1{
+/* La visibiliter de la barre de vie }*/
+.barrePv:hover .monstre1{
 
     visibility: visible;
 
 }
 
-.boiteMonstres:hover .monstre2{
+.barrePv2:hover .monstre2{
 
     visibility: visible;
 
 }
 
-.boiteMonstres:hover .monstre3{
+.barrePv3:hover .monstre3{
 
     visibility: visible;
 
@@ -98,6 +94,62 @@ body{
 
 }
 
+.boitePvHeros .barreHero2{
+
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 2%;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.boitePvHeros:hover .barreHero2{
+
+    visibility: visible;
+
+}
+
+.boitePvHeros .barreHero3{
+
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 2%;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.boitePvHeros:hover .barreHero3{
+
+    visibility: visible;
+
+}
+
+.boitePvHeros .barreHero4{
+
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 2%;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.boitePvHeros:hover .barreHero4{
+
+    visibility: visible;
+
+}
 
 
 .herosSprite{
