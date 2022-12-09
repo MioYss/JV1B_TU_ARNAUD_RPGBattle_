@@ -24,7 +24,7 @@ body{
     color: aliceblue;
     border-radius: 2%;
     padding: 5px;
-    position: absolute;
+    position: relative;
     z-index: 1;
 
 }
@@ -37,7 +37,7 @@ body{
     color: aliceblue;
     border-radius: 2%;
     padding: 5px;
-    position: absolute;
+    position: relative;
     z-index: 1;
 
 }
@@ -50,7 +50,7 @@ body{
     color: aliceblue;
     border-radius: 6%;
     padding: 5px;
-    position: absolute;
+    position: relative;
     z-index: 1;
 
 }
@@ -237,3 +237,83 @@ body{
 }
 
 
+/* Les boites et les sprite d'animations des monstres }*/
+#container {
+
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+
+#animate {
+    
+    padding: 1% 10% 10% 10%; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+
+#animate2 {
+    
+    padding: 180px 10% 10% 10%; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+
+#animate3 {
+    
+    padding: 350px 10% 10% 10%; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+
+
+/* Les boites et les sprite d'animations des héros }*/
+#container2 {
+
+    width: 4000px;
+    height: 4000px;
+    position: relative;
+}
+
+#animate4 {
+    
+    padding: 1% 10% 10% 830px; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+
+#animate5 {
+    
+    padding: 120px 10% 10% 25px; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+
+#animate6 {
+    
+    padding: 500px 10% 10% 25px; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}
+
+#animate7 {
+    
+    padding: 300px 10% 10% 25px; 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+
+}

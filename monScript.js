@@ -21,7 +21,9 @@ function fcAttaqueheros1(){ //fonction attaquer du héro
         pvMonstre1.value -= 10;
         affichage.innerHTML = "Le monstre perd 10 PV !";
         actionHeros1 = true;
+        animationAtk()
         riposteMonstre();
+        
     }
 }
 function defenseheros1(){ // fonction defendre du héro, ne peux pas subir de dégat durant cette phase
@@ -153,5 +155,84 @@ function riposteMonstre(){
         actionHeros3 = false;
         actionHeros4 = false;
     }
+
+}
+
+//fonction pour faire apparaitre l'animation d'attaque sur les monstres
+function animationAtk(){
+
+    document.getElementById("animationDmg").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg").hidden=true;
+    },1500);
+
+}
+
+function animationAtk2(){
+
+    document.getElementById("animationDmg2").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg2").hidden=true;
+    },1500);
+
+}
+
+function animationAtk3(){
+
+    document.getElementById("animationDmg3").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg3").hidden=true;
+    },1500);
+
+}
+
+//animation pour les dégats des héros
+function animationRiposte4(){
+
+    document.getElementById("animationDmg4").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg4").hidden=true;
+    },1500);
+
+}
+
+function animationRiposte5(){
+
+    document.getElementById("animationDmg5").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg5").hidden=true;
+    },1500);
+
+}
+
+function animationRiposte6(){
+
+    document.getElementById("animationDmg6").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg6").hidden=true;
+    },1500);
+
+}
+
+function animationRiposte7(){
+
+    document.getElementById("animationDmg7").hidden=false
+
+    setTimeout(function(){
+
+        document.getElementById("animationDmg7").hidden=true;
+    },1500);
 
 }
