@@ -2,11 +2,20 @@
 // Les variables besoin pour mon JS déclarer au début de celui ci
 pvMonstre1 = document.getElementById("pvMonstre1")
 monstre1 = document.getElementById("pvMonstre1")
-pvHero1 = document.getElementById("pvHero1")
-barrePv = document.getElementsByClassName("barrePv")
+var pvHero1 = document.getElementById("pvHero1")
+pvHero2 = document.getElementById("pvHero2")
+pvHero3 = document.getElementById("pvHero3")
+pvHero4 = document.getElementById("pvHero4")
+
+
 degatMonstres = 0;
 cibleRandom = 0;
+nombreMonstresVivants = 3;
+nombreHerosVivants = 4;
+compteurAction = 0
 
+mortMonstreSprite = false
+mort = false
 // Variable pour definir la valeur de l'actions des heros
 var actionHeros1 = false;
 var actionHeros2 = false;
@@ -26,9 +35,11 @@ function fcAttaqueheros1(){ //fonction attaquer du héro
         pvMonstre1.value -= 10;
         affichage.innerHTML = "Le monstre perd 10 PV !";
         actionHeros1 = true;
-        animationAtk()
-        mortMonstres()
+        animationAtk();
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
+        compteurAction + 1
         
     }
 }
@@ -37,7 +48,9 @@ function defenseheros1(){ // fonction defendre du héro, ne peux pas subir de d�
         affichage.innerHTML = "Vous ne pouvez pas subir de dégats !";
         actionHeros1 = true;
         verifDefense1 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     }
     
 }
@@ -48,7 +61,9 @@ function attaqueSpe1(){// fonction attaque spéciale qui fais plus de dégats
         pvMonstre1.value -= 30;
         affichage.innerHTML = "Le monstre perd 30 PV !"
         actionHeros1 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     }
 
 }
@@ -60,7 +75,10 @@ function fcAttaqueheros2(){
         pvMonstre1.value -= 10;
         affichage.innerHTML = "Le monstre perd 10 PV !";
         actionHeros2 = true;
+        animationAtk()
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     }
 
 }
@@ -71,7 +89,9 @@ function defenseheros2(){
         affichage.innerHTML = "Vous ne pouvez pas subir de dégats !";
         actionHeros2 = true;
         verifDefense2 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     }  
 
 }
@@ -82,7 +102,9 @@ function attaqueSpe2(){
         pvMonstre1.value -= 30;
         affichage.innerHTML = "Le monstre perd 30 PV !"
         actionHeros2 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     } 
 
 }
@@ -93,7 +115,10 @@ function fcAttaqueheros3(){
         pvMonstre1.value -= 10;
         affichage.innerHTML = "Le monstre perd 10 PV !";
         actionHeros3 = true;
+        animationAtk()
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     } 
 
 }
@@ -104,7 +129,9 @@ function defenseheros3(){
         affichage.innerHTML = "Vous ne pouvez pas subir de dégats !";
         actionHeros3 = true;
         verifDefense3 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     } 
     
 }
@@ -114,7 +141,9 @@ function attaqueSpe3(){
         pvMonstre1.value -= 30;
         affichage.innerHTML = "Le monstre perd 30 PV !"
         actionHeros3 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     } 
 
 }
@@ -125,7 +154,10 @@ function fcAttaqueheros4(){
         pvMonstre1.value -= 10;
         affichage.innerHTML = "Le monstre perd 10 PV !";
         actionHeros4 = true;
+        animationAtk()
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     } 
 }
 
@@ -135,7 +167,9 @@ function defenseheros4(){
         affichage.innerHTML = "Vous ne pouvez pas subir de dégats !";
         actionHeros4 = true;
         verifDefense4 = true;
+        mortMonstres();
         riposteMonstre();
+        mortHeros();
     } 
     
 }
@@ -146,7 +180,9 @@ function attaqueSpe4(){
         pvMonstre1.value -= 30;
         affichage.innerHTML = "Le monstre perd 30 PV !";
         actionHeros4 = true;
-        riposteMonstre()
+        mortMonstres();
+        riposteMonstre();
+        mortHeros();
     } 
 
 }
@@ -155,9 +191,13 @@ function attaqueSpe4(){
 function riposteMonstre(){
 
     if ((actionHeros1 && actionHeros2) && (actionHeros3 && actionHeros4)){
-        riposteAleatoire()
-        //pvHero1.value -= 10
-        //console.log(pvHero1);
+
+        for (i=0; i<nombreMonstresVivants;i++){
+            setTimeout(function(){  // pour que les riposte ce fasse les une après les autres
+                riposteAleatoire();
+            },1000);
+
+        }
 
         actionHeros1 = false;
         actionHeros2 = false;
@@ -249,53 +289,62 @@ function animationRiposte7(){
 //Fonction riposte aléatoire
 function riposteAleatoire(){
 
-    cibleRandom = Math.floor(Math.random()*5)
-    degatMonstres = Math.floor(Math.random()*20); 
 
-    if(cibleRandom==1){
-        if(verifDefense1==true){
-          verifDefense1=false
-        }else{
-            document.getElementById("pvHero1")=document.getElementById("pvHero1")-=DegatMonstre  
-        }
-      }
-  
-      if(cibleRandom==2){
-        if(verifDefense2==true){
-            verifDefense2=false
-        }else{
-            document.getElementById("pvHero2")=document.getElementById("pvHero2")-=DegatMonstre  
-        }
-      }
-  
-      if(cibleRandom==3){
-        if(verifDefense3==true){
-            verifDefense3=false
-        }else{
-            document.getElementById("pvHero3")=document.getElementById("pvHero3")-=DegatMonstre  
-        }
-      }
-      
-      if(cibleRandom==4){
-        if(verifDefense4==true){
-            verifDefense4=false
-        }else{
-            document.getElementById("pvHero4")=document.getElementById("pvHero4")-=DegatMonstre  
-        }
-      }
-  
-      if(cibleRandom==0){
-        dialoguehtml.innerHTML="Echec critique du monstre "
-      }
-      affichagehtml.innerHTML="Le monstre vous inflige " +  DegatMonstre
+
+            cibleRandom = Math.floor(Math.random()*5);
+            degatMonstres = Math.floor(Math.random()*2005); 
+
+                if(cibleRandom==1){
+                    if(verifDefense1==true){
+                        verifDefense1=false;
+                    }else{
+                        document.getElementById("pvHero1").value =document.getElementById("pvHero1").value -degatMonstres; 
+                        animationRiposte4()
+                    }
+                }
+            
+                if(cibleRandom==2){
+                    if(verifDefense2==true){
+                        verifDefense2=false;
+                    }else{
+                        document.getElementById("pvHero2").value =document.getElementById("pvHero2").value -degatMonstres; 
+                        animationRiposte5()
+                    }
+                }
+            
+                if(cibleRandom==3){
+                    if(verifDefense3==true){
+                        verifDefense3=false;
+                    }else{
+                        document.getElementById("pvHero3").value = document.getElementById("pvHero3").value -degatMonstres;
+                        animationRiposte7()  
+                    }
+                }
+                
+                if(cibleRandom==4){
+                    if(verifDefense4==true){
+                        verifDefense4=false
+                    }else{
+                        document.getElementById("pvHero4").value =document.getElementById("pvHero4").value -degatMonstres;
+                        animationRiposte6()
+                    }
+                }
+            
+                if(cibleRandom==0){
+                    affichage.innerHTML="Echec critique du monstre ";
+                }
+
+                    affichage.innerHTML="Le monstre vous inflige " +  degatMonstres;
+
+
 }
 
 //Fonction pour faire disparaitre les héros quand ils n'on plus de pv et ne plus pouvoir intéragir avec
 function mortHeros(){
 
-    if (pvHero1<=0 && mort==false){ //si les hp du héros inféérieure ou égale à 0
-        spriteHeros.style.visibility="hidden";      //fait disparaitre // Mettre une var spriteHeros = document.getElementById (""), changer les boite heros en id, refaire toute mon html et css par rapport au boite de heros qui deviennent des id plus des class
-        mort=true
+    if (pvHero1<=0 && mortHéros==false){ //si les hp du héros inféérieure ou égale à 0
+        pvHero1.style.visibility = "hidden";     //fait disparaitre      
+        mort=true;
         dialoguehtml.innerHTML="Le heros mort !"
     }
 
@@ -303,8 +352,8 @@ function mortHeros(){
 
 //Fonction pour faire disparaitre les monstres quand ils n'on plus de pv et ne plus pouvoir intéragir avec
 function mortMonstres(){
-    if (pvMonstre1<=0){       
-        document.getElementsByClassName("barrePv").visible=false;      //fait disparaitre
+    if (pvMonstre1<=0 && mortMonstreSprite==false){       
+        document.getElementById(barrePv).hidden = true;      //fait disparaitre
       affichage.innerHTML="Bien joué !";
     }
   }
@@ -313,10 +362,24 @@ function mortMonstres(){
 
 function selectionHeros(){
 
+        if (heros1.style.visibility ="hidden") {
+            heros1.style.visibility ="visible";
+        } else {
+            heros1.style.visibility ="hidden";
+        } 
 
 }
 
+function choixAttaqueHeros(){ // Pour selectionner le mosntre a attaquer
+    dialoguehtml.innerHTML="Choisissez une cible"           
+    monstre01.onclick=selctionMonstre          
+    monstre02.onclick=selectionMonstre2
+    monstre03.onclick=selectionMonstre3
+        
+  }
+
 //Les actions ne sont pas utilisable plusieurs fois d'affiler
 function singleAction (){
-    
+    if (compteurAction == 1);
+    fcAttaqueheros1() = none;
 }

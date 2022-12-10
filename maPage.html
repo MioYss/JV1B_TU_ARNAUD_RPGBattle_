@@ -18,7 +18,7 @@
                                 <div class="monstresSprite" >
                                                 <!--Affichage des monstres et la barre de vie-->
                                     <div class = "barrePv"> 
-                                        <img class = "boiteMonstres" src= "img/mob01.png" visible /> 
+                                            <img class = "boiteMonstres" src= "img/mob01.png" visible /> 
 
                                         <span class="monstre1">
                                             <progress id="pvMonstre1" value="100" max="100"></progress>
@@ -57,46 +57,48 @@
                                 <img id = "animationDmg4" src= "img/slash.png" hidden /> <!-- Afichage heros + annimation attaque -->
                             </div>
                                 <div class="herosSprite">
-                                        <img class = "boitePvHeros"src= "img/hero1.png">
+                                    <div id = "boiteSelectionHeros"> <!--Boite de selection-->
+                                        <img id = spriteHeros1 class = "boitePvHeros"src= "img/hero1.png">
+                                    </div>
                                             <span class="barreHero1">   <!--barre de vie -->
                                                 <progress id="pvHero1" value="100" max="100"></progress>
 
                                                 <div id= "barreHero1"></div>
                                             </span>
-                                        </img>
+                                        
 
                             <div id ="animate5">
                                 <img id = "animationDmg5" src= "img/slash.png" hidden />
                             </div>
-                                        <img class = "boitePvHeros" src= "img/hero2.png">
+                                        <img id = spriteHeros2 class = "boitePvHeros" src= "img/hero2.png" visible>
                                             <span class="barreHero2">
                                                 <progress id="pvHero2" value="100" max="100"></progress>
 
                                                 <div id= "barreHero2"></div>
                                             </span>
-                                        </img>
+                                        
 
                             <div id ="animate7">
                                 <img id = "animationDmg7" src= "img/slash.png" hidden />
                             </div>
-                                        <img class = "boitePvHeros" src= "img/hero3.png">
+                                        <img id = spriteHeros3 class = "boitePvHeros" src= "img/hero3.png">
                                             <span class="barreHero3">
                                                 <progress id="pvHero3" value="100" max="100"></progress>
 
                                                 <div id= "barreHero3"></div>
                                             </span>
-                                        </img>
+                                        
 
                             <div id ="animate6">
                                 <img id = "animationDmg6" src= "img/slash.png" hidden />
                             </div>
-                                        <img class = "boitePvHeros" src= "img/hero4.png">
+                                        <img id = spriteHeros4 class = "boitePvHeros" src= "img/hero4.png">
                                             <span class="barreHero4">
                                                 <progress id="pvHero4" value="100" max="100"></progress>
 
                                                 <div id= "barreHero4"></div>
                                             </span>
-                                        </img>
+                                </div>
 
                             
                     </div>

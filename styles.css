@@ -157,8 +157,9 @@
 
 }
 
+
 /* Toutes les boites nécessaire pour les emplacements d'affichage }*/
-body{
+.body{
     width: 100vw;
     height: 100vh;
     margin: 0%;
@@ -291,7 +292,7 @@ body{
 
 #animate4 {
     
-    padding: 1% 10% 10% 830px; 
+    padding: 1% 10% 10% 1200px; 
     width: 100px;
     height: 100px;
     position: absolute;
@@ -322,5 +323,16 @@ body{
     width: 100px;
     height: 100px;
     position: absolute;
+
+}
+
+/* Boite pour cliquer sur le héros pour afficher ses options }*/
+
+#boiSelectionHeros{
+
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background-color: rgb(141, 14, 99);
 
 }
