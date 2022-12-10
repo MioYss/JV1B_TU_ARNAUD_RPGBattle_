@@ -7,7 +7,6 @@
         <script src="monScript.js" async></script>
     </head>
     <body>
-        <div id="maDiv">Le joueur attaque</div>
         <div id="affichage"></div>
         
 
@@ -19,7 +18,7 @@
                                 <div class="monstresSprite" >
                                                 <!--Affichage des monstres et la barre de vie-->
                                     <div class = "barrePv"> 
-                                        <img class = "boiteMonstres" src= "img/mob01.png" />
+                                        <img class = "boiteMonstres" src= "img/mob01.png" /> 
 
                                         <span class="monstre1">
                                             <progress id="pvMonstre1" value="100" max="100"></progress>
@@ -51,15 +50,15 @@
                     </div>
                 </div>
 
-                        <!-- Afichage heros et barre de vie -->
+                        <!-- Afichage heros -->
 
                         <div id ="container2">
                             <div id ="animate4">
-                                <img id = "animationDmg4" src= "img/slash.png" hidden />
+                                <img id = "animationDmg4" src= "img/slash.png" hidden /> <!-- Afichage heros + annimation attaque -->
                             </div>
                                 <div class="herosSprite">
                                         <img class = "boitePvHeros" src= "img/hero1.png">
-                                            <span class="barreHero1">
+                                            <span class="barreHero1">   <!--barre de vie -->
                                                 <progress id="pvHero1" value="100" max="100"></progress>
 
                                                 <div id= "barreHero1"></div>
@@ -107,7 +106,7 @@
                 </div>
                     <div class="boiteHeros">
 
-                        <div class="heros1">
+                        <div class="heros1"> <!-- Les différents bouton avec leur fonctions -->
                             <button onclick ="fcAttaqueheros1()" id="atkHeros1">Attaque</button>
                             <button onclick ="defenseheros1()">Defense</button>
                             <button onclick="attaqueSpe1()">Sort</button>

@@ -1,8 +1,5 @@
 
-// une div affichage pour tous les massages, comme dialogue ff
-// div.onclick machin sur quoi on doit cliquer pas forcement texte
-// div click a changer apres
-
+// Les variables besoin pour mon JS déclarer au début de celui ci
 pvMonstre1 = document.getElementById("pvMonstre1")
 monstre1 = document.getElementById("pvMonstre1")
 pvHero1 = document.getElementById("pvHero1")
@@ -235,4 +232,34 @@ function animationRiposte7(){
         document.getElementById("animationDmg7").hidden=true;
     },1500);
 
+}
+
+//Fonction riposte aléatoire
+function riposteAleatoire(){
+
+
+}
+
+//Fonction pour faire disparaitre les héros quand ils n'on plus de pv et ne plus pouvoir intéragir avec
+function mortHeros(){
+
+
+}
+
+//fFonction pour faire disparaitre les monstres quand ils n'on plus de pv et ne plus pouvoir intéragir avec
+function mortMonstres(){
+
+
+}
+
+//Selection hero et affichage unique de son menu
+
+function selectionHeros(){
+
+
+}
+
+//Les actions ne sont pas utilisable plusieurs fois d'affiler
+function singleAction (){
+    
 }

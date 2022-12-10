@@ -1,18 +1,12 @@
 
-body{
-    width: 100vw;
-    height: 100vh;
-    margin: 0%;
+/* Boite de texte }*/
+
+.affichage{
+
+    margin: 50%;
 
 }
 
-.champDeBataille{
-
-    display: flex;
-    flex-direction: row;
-
-
-}
 
 /* Le setting de la barre de vie }*/
 
@@ -152,6 +146,7 @@ body{
 }
 
 
+
 .herosSprite{
 
     padding: 1% 10% 10% 70%; 
@@ -162,9 +157,11 @@ body{
 
 }
 
-.tropPetit{
-    height: 250px;
-    width: 250px;
+/* Toutes les boites nécessaire pour les emplacements d'affichage }*/
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
 
 }
 
@@ -238,6 +235,16 @@ body{
 
 
 /* Les boites et les sprite d'animations des monstres }*/
+
+.champDeBataille{
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+
 #container {
 
     width: 400px;
